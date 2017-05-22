@@ -1,0 +1,1 @@
+console.log("%s: %d", "Hello World", 25);
