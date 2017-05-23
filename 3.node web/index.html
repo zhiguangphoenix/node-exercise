@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>node web</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            form{
+                /*display: inline-block;*/
+                /*margin: 0 auto;*/
+                text-align: center;
+            }
+            .title{
+
+            }
+            .area{
+                margin-top: 10px;
+            }
+            .submit{
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="http://localhost:3000/" method="post">
+            <input type="text" name="title" class="title">
+            <br>
+            <textarea name="text" id="" cols="30" rows="10" class="area"></textarea>
+            <br>
+            <input type="submit" class="submit">
+        </form>
+    </body>
+</html>
