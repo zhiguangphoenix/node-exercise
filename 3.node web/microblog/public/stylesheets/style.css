@@ -1,0 +1,80 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  position: relative;
+}
+.nav{
+  background-color: black;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+}
+.nav-list{
+  display: initial;
+}
+.nav-list li{
+  display: inline-block;
+}
+.nav-list li:not(:first-child){
+  margin-left: 10px;
+}
+.nav-list li a{
+  color: white;
+}
+.footer{
+  position: absolute;
+  bottom: 0px;
+  height: 35px;
+  color: white;
+  line-height: 35px;
+  background-color: black;
+  width: 100%;
+}
+.footer-text{
+  margin-left: 30px;
+}
+.content{
+  padding: 20px 40px 0px 40px;
+}
+.row1{
+  background-color: #eee;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-left: 40px;
+  height: 300px;
+}
+.row1 button{
+  width: 80px;
+  height: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  
+}
+button.login{
+  background-color: #77F701;
+}
+button.login a{
+  color: white;
+}
+button.reg a{
+  color: black;
+}
+.row2{
+  padding-top: 15px;
+  overflow: auto;
+}
+.row2 div{
+  display: inline-block;
+  float: left;
+  width: 32%;
+}
+.row2 div:not(:first-child){
+  margin-left: 16px;
+}
+a{
+  text-decoration: none;
+}
