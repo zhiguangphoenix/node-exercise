@@ -1,5 +1,5 @@
 var htutil = require('./htutil');
-exports.get = function (req, res) {
+exports.get = function (req, res, next) {
 	res.writeHead(200, {
 		'Content-Type': 'text/html'
 	});
