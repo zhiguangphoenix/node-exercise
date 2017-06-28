@@ -1,7 +1,7 @@
 var htutil = require('./htutil');
 var math = require('./math');
 
-exports.get = function (req, res) {
+exports.get = function (req, res, next) {
 	res.writeHead(200, {
 		'Content-Type': 'text/html'
 	});
@@ -16,4 +16,6 @@ exports.get = function (req, res) {
 				"</form>"
 			].join('\n'))
 		)
+	if(next)
+		next();
 }
