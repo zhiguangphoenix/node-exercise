@@ -12,6 +12,7 @@ exports.createServer = function () {
 	htserver.basicServer = {
 		containers: []
 	}
+	
 	htserver.addContainer = function (host, path, module, options) {
 		if(lookupContainer(htserver, host, path) !== undefined) {
 			throw new Error("Already mapped " + host + "/path");
