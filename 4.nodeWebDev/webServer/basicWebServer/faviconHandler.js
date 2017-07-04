@@ -1,4 +1,4 @@
-var fs = require("js");
+var fs = require("fs");
 var mime = require("mime");
 
 exports.handle = function (req, res) {
@@ -11,6 +11,7 @@ exports.handle = function (req, res) {
 				res.writeHead(500, { "Content-Type": "text/plain" });
 				res.end(req.basicServer.container.options.iconPath + "not Found");
 			}else{
+				console.log("fuck");
 				res.writeHead(200, { "Content-Type": mime.lookup(req.basicServer.container.options.iconPath), "Content-Length": buf.length });
 				res.end(buf);
 			}
