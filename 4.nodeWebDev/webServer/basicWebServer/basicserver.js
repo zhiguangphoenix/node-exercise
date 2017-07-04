@@ -4,7 +4,7 @@ var url = require("url");
 exports.createServer = function () {
 	var htserver = http.createServer(function (req, res) {
 		req.basicServer = {
-			urlparsed: url.parse(req.url, true);
+			urlparsed: url.parse(req.url, true)
 		};
 		processHeaders(req, res);
 		dispatchToContainer(htserver, req, res);
@@ -47,7 +47,7 @@ exports.createServer = function () {
 var lookupContainer = function (htserver, host, path) {
 	for(var i = 0;i < htserver.basicServer.containers.length;i++) {
 		var container = htserver.basicServer.containers[i];
-		var hostMatches = host.toLowerCase().math(container.host);
+		var hostMatches = host.toLowerCase().match(container.host);
 		var pathMatches = path.match(container.path);
 		if(hostMatches !== null && pathMatches !== null) {
 			return {
@@ -91,7 +91,7 @@ var dispatchToContainer = function (htserver, req, res) {
 		container.container.module.handle(req, res);
 	} else {
 		res.writeHead(404, { "Content-Type": "text/plain" });
-		res.end("no handler found for" + req.host + "/" + req.urlparsed.path);
+		res.end("no handler found for" + req.host + "/" + req.basicServer.urlparsed.path);
 	}
 }
 
