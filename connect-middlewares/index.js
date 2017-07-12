@@ -4,15 +4,20 @@ var app = connect();
 
 
 
-app.use(function (req, res, next) {
-	if(req.url === '/'){
-		res.end('Hello from Connect!\n');
-	}
+// app.use(function (req, res, next) {
+
+// 	res.end('Hello from Connect!\n');
+// 	next();
+// })
+
+app.use('/aa', function (req, res, next) {
+	res.end('/aa');
 	next();
 })
 
-app.use('/aa/bb/cc', function(req, res, next) {
+app.use('/aa/bb', function(req, res, next) {
 	res.end('aabbcc');
 })
+
 
 app.listen(3000);

@@ -78,9 +78,14 @@ fuck.route = [];
 fuck.name = [];
 console.log(fuck);
 
+var aaaaa;
+function returnBack() {
+	var bb = 22;
+	return aaaaa = bb;
+}
 
-
-
+console.log('aa: ' + aaaaa);
+console.log(returnBack());
 
 
 
